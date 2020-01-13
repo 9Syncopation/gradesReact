@@ -1,0 +1,17 @@
+.searchBar {
+    background-color: #eca1a6;
+}
+
+.field {
+    width: 30%;
+    height: 30px;
+    margin: 5px;
+    border-radius: 4px;
+    position: relative;
+    background-color: rgba(255,255,255,0.3);
+    transition: 0.3s all;
+  }
+  .field:hover {
+    background-color: rgba(218, 112, 112, 0.45);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+  }

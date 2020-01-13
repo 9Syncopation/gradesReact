@@ -1,0 +1,9 @@
+.footer {
+    background-color:#ada397;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: rgb(34, 32, 32);
+  }
