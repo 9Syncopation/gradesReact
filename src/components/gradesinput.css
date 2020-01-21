@@ -5,3 +5,9 @@
     margin: 5px;
     border: 5px solid black;
 }
+
+.errorInput{
+    color: red;
+    font-style: italic;
+    font-size: 0.85rem;
+}

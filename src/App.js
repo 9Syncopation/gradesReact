@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './components/Header'
-import Footer from './components/footer'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 import Main from './Containers/Main/Main'
-import Users from './components/users'
-import Contacts from './components/contacts'
+import Users from './Components/Users'
+import Contacts from './Components/Contacts'
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom'
 import './App.css';
 
@@ -15,8 +15,8 @@ function App() {
         <div className = 'container'>
         <Switch>
         <Route exact path ="/" component={Main} />
-        <Route path ="/users" component={Users}/>
-        <Route path ="/contacts" component={Contacts}/>
+        <Route path ="/Users" component={Users}/>
+        <Route path ="/Contacts" component={Contacts}/>
         </Switch>
         </div>
         

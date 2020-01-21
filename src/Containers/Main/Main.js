@@ -1,9 +1,9 @@
 import React from 'react'
-import Gradesinput from '../../components/gradesinput.js'
-import Userdetails from '../../components/userdetails'
-import SearchBar from '../../components/SearchBar'
+import Gradesinput from '../../Components/Gradesinput'
+import Userdetails from '../../Components/Userdetails'
+import SearchBar from '../../Components/SearchBar'
 
-import './main.css'
+import './Main.css'
 
 const main = (props) => (
     <div >
