@@ -2,15 +2,23 @@ import React from 'react'
 import './Userdetails.css'
 
 
-const userdetails = (props) => (
-    <div className='userdetails'>
-        <h1>
-        Student Grades Sheet 
-        </h1>
+class userdetails extends  React.Component {
+
+    render() {
+        return (
+
+            <div className='userdetails'>
+                <h1>
+                    Student Grades Sheet
+                    </h1>
+                    {this.props.parentState}
+                    
+            
+            </div>
+        )
+    }
     
+}
 
-        </div>
-
-)
 
 export default userdetails

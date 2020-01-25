@@ -21,10 +21,10 @@ class Gradesinput extends React.Component {
     state = initialState
     
     handleChange = (event) => {
-        console.log(event.target.name);
+        // console.log(event.target.name);
         
         this.setState({ [event.target.name]: event.target.value })
-        console.log(event.target.name);
+        // console.log(event.target.name);
         
     }
 
@@ -33,6 +33,7 @@ class Gradesinput extends React.Component {
         const isValid = this.validate()
         if (isValid) {
             console.log('submit details', this.state);
+            this.props.updateMainComponent(this.state)
             this.setState(initialState)
             }
     }
@@ -46,11 +47,14 @@ class Gradesinput extends React.Component {
         
         if (!this.state.name) { nameError = "Name cannot be blank"; }
         // if (!this.state.email) { emailError = "Email cannot be blank"; }
-        if (!this.state.email.includes("@")) { emailError = " Email cannot be blank and must contain '@' sign"; }
+        // if (!this.state.email.includes("@")) { emailError = " Email cannot be blank and must contain '@' sign" }
         if (!this.state.password) {passwordError = "Must enter a password";}
-        if (!this.state.password.includes('!')) passwordError ="password must include '!' sign"
-        if (this.state.id.includes('A')) idError ="Id cannot include letters"
-        if (this.state.grade.includes('A')) gradeError ="grade cannot include letters"
+        // if (!this.state.password.includes('!')) passwordError ="password must include '!' sign"
+
+        // TODO how to validate a number
+        //TODO how to validate 2 digits at the grade
+        // if (this.state.id.includes('A')) idError ="Id cannot include letters"
+        // if (this.state.grade.includes('A')) gradeError ="grade cannot include letters"
         
         if (nameError || emailError || passwordError || idError|| gradeError) {
             this.setState({ nameError, emailError, passwordError, gradeError })
@@ -61,7 +65,7 @@ class Gradesinput extends React.Component {
     }
     
     render() {
-        console.log(this.state);
+        // console.log('start state', this.state);
         return ( 
             <form onSubmit={this.handleSubmit} className = 'gradesinput'>
                 <h1> Enter Student Details</h1>
@@ -123,7 +127,9 @@ class Gradesinput extends React.Component {
                 <button type="submit">Submit</button>
                 
                 
-                </form>
+                <div> {this.state.state} </div>
+               
+            </form>
                 )
             }
            
